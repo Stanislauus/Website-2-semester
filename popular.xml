@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cities>
+    <city1>
+        <arrival_place>Москва</arrival_place>
+        <departure_place>Минск</departure_place>
+    </city1>
+    <city2>
+        <arrival_place>Санкт-Петербург</arrival_place>
+        <departure_place>Минск</departure_place>
+    </city2>
+    <city3>
+        <arrival_place>Нижний Новгород</arrival_place>
+        <departure_place>Минск</departure_place>
+    </city3>
+    <city4>
+        <arrival_place>Калининград</arrival_place>
+        <departure_place>Минск</departure_place>
+    </city4>
+    <city5>
+        <arrival_place>Стамбул</arrival_place>
+        <departure_place>Минск</departure_place>
+    </city5>
+    <city6>
+        <arrival_place>Каир</arrival_place>
+        <departure_place>Минск</departure_place>
+    </city6>
+    <city7>
+        <arrival_place>Париж</arrival_place>
+        <departure_place>Минск</departure_place>
+    </city7>
+    <city8>
+        <arrival_place>Венеция</arrival_place>
+        <departure_place>Минск</departure_place>
+    </city8>
+</cities>

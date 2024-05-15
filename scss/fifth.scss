@@ -1,0 +1,1247 @@
+$rgb-bg: linear-gradient(25deg, #1488cc 0%, #2b32b2 100%);
+$green: rgba(33, 222, 33, 1);
+$blue: rgba(24, 75, 255, 1);
+@mixin flexrow{
+    display: flex;
+    flex-direction: row;
+}
+%padd{
+    padding: 0 12vw;
+}
+@mixin a{
+    text-decoration: none;
+    color: white;
+}
+@mixin h1{
+    font-size: 46px;
+    color: white;
+}
+@mixin h2{
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+}
+@mixin p{
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+}
+@mixin img{
+    width: 160px;
+    height: 160px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+::-webkit-scrollbar {
+    width: 0; 
+}
+html, body { 
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Для Firefox */
+    min-height: 100%;
+    margin: 0;
+
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.adaptive{
+    display: grid;
+    grid-template-rows: 50px 2fr 220px;
+    row-gap: 0;
+}
+.header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: black;
+}
+.header-content{
+    @include flexrow;
+    align-items: center;
+    justify-content: space-between;
+    @extend %padd;
+    height: 100%;
+
+}
+.header-content .menu .menu-list{
+    display: flex;
+    gap: 35px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.header .burger{
+    display: none;
+}
+.logo-text a, .menu a{
+    @include a;
+}
+.header-content .logo{
+    background: url(/pictures/plane.svg) no-repeat;
+    padding-left: 65px;  
+    background-size: contain;
+}
+.header-content .logo .logo-text{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+
+
+.main{
+    background: $rgb-bg;
+    display: grid;
+    grid-template-rows: 200px 2fr 1fr 150px;
+    row-gap: 0;
+}   
+
+.main .panel-content{
+    @extend %padd;
+    @include flexrow;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.panel-content .block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 170px;
+    height: 70px;
+    border-radius: 10px;
+}
+.panel-content .block:not(:nth-child(4)){
+    background-color: rgba(214, 214, 214, 1);
+}
+.panel-content .block p:nth-child(1){
+    font-size: 22px;
+    font-weight: 700;
+}
+.panel-content .block:not(:nth-child(4)) p:nth-child(2){
+    font-size: 20px;
+    font-weight: 300;
+}
+.panel-content .block:not(:nth-child(4)) p a{
+    text-decoration: none;
+    color: rgba(42, 45, 54, 1);
+}
+.panel-content .block:not(:nth-child(4)) p:nth-child(1){
+    color: black;
+}
+.panel-content .block:nth-child(4){
+    background-color: $green;
+}
+.panel-content .block:nth-child(4) p {
+    color: white;
+}
+.panel-content .block:nth-child(4) p:nth-child(2){
+    font-size: 20px;
+    font-weight: 700;
+}
+.main .rules-content{
+    @extend %padd;
+    margin-bottom: 60px;
+}
+.rules-content .p-rule{
+    padding: 0 20px;
+}
+.main .things{
+    padding: 0 8vw
+}
+.main h1{
+    @include h1;
+}
+.main h2{
+    @include h2;
+}
+.main .rules-content, .animals-content p{
+    @include p;
+}
+img:not(.cat, .parrot, .tg, .inst){
+    @include img;
+    position: relative;
+    top: 30px;
+}
+.thing{
+    padding: 50px 0;
+    @include flexrow;
+    gap: 10px;
+}
+.thing:nth-child(2) h2{
+    text-align: right;
+}
+
+.main .animals-content{
+    @extend %padd;
+}
+.animals{
+    padding: 0 8vw;
+}
+.animals .animal{
+    padding: 50px 0;
+    @include flexrow;
+    gap: 10px;
+}
+.cat{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 10px;
+}
+.parrot{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 10px;
+}
+
+.main .button-content{
+    @extend %padd;
+    @include flexrow;
+    justify-content: flex-end;
+    align-items: center;
+}
+.button-content button{
+    cursor: pointer;
+    color: white;
+    margin-right: 60px;
+    border: 0;
+    background-color: $blue;
+    width: 200px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.button-content button:hover{
+    background-color: white;
+    color: $blue;
+}
+.button-content button:active{
+    background-color: rgba(231, 233, 240, 1);
+}
+.button-content button p{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+.footer{
+    background-color: black;
+}
+.footer-content{
+    height: 100%;
+    @extend %padd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.support{
+    width: 250px;
+    position: relative;
+    bottom: 18.75px;
+}
+.adress{
+    width: 250px;
+}
+.icons{
+    padding-left: 7px;
+}
+.icons img:nth-child(1){
+    width: 80px;
+}
+.icons img:nth-child(2){
+    width: 114px;
+    position: relative;
+    top: 3.5px;
+    left: 10px;
+}
+.footer-content h3{
+    font-size: 18px;
+}
+.footer-content p{
+    font-size: 14px;
+}
+
+@media (min-width: 1200px){
+
+}
+
+@media (min-width: 1000px) and (max-width: 1200px){
+    %paddLaptop{
+        padding: 0 10vw;
+    }
+    .adaptive{
+        display: grid;
+        grid-template-rows: 50px 2fr 220px;
+        row-gap: 0;
+    }
+    .header{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: black;
+    }
+    .header-content{
+        @include flexrow;
+        align-items: center;
+        justify-content: space-between;
+        @extend %paddLaptop;
+        height: 100%;
+    
+    }
+    .header-content .menu .menu-list{
+        display: flex;
+        gap: 35px;
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .header .burger{
+        display: none;
+    }
+    .logo-text a, .menu a{
+        @include a;
+    }
+    .header-content .logo{
+        background: url(/plane.svg) no-repeat;
+        padding-left: 65px;  
+        background-size: contain;
+    }
+    .header-content .logo .logo-text{
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+    .main{
+        background: $rgb-bg;
+        display: grid;
+        grid-template-rows: 200px 2fr 1fr 150px;
+        row-gap: 0;
+    }   
+    
+    .main .panel-content{
+        @extend %paddLaptop;
+        @include flexrow;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .panel-content .block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 150px;
+        height: 70px;
+        border-radius: 10px;
+    }
+    .panel-content .block:not(:nth-child(4)){
+        background-color: rgba(214, 214, 214, 1);
+    }
+    .panel-content .block p:nth-child(1){
+        font-size: 21px;
+        font-weight: 700;
+    }
+    .panel-content .block:not(:nth-child(4)) p:nth-child(2){
+        font-size: 19px;
+        font-weight: 300;
+    }
+    .panel-content .block:not(:nth-child(4)) p a{
+        text-decoration: none;
+        color: rgba(42, 45, 54, 1);
+    }
+    .panel-content .block:not(:nth-child(4)) p:nth-child(1){
+        color: black;
+    }
+    .panel-content .block:nth-child(4){
+        background-color: $green;
+    }
+    .panel-content .block:nth-child(4) p {
+        color: white;
+    }
+    .panel-content .block:nth-child(4) p:nth-child(2){
+        font-size: 19px;
+        font-weight: 700;
+    }
+    .main .rules-content{
+        @extend %paddLaptop;
+        margin-bottom: 60px;
+    }
+    .rules-content .p-rule{
+        padding: 0 20px;
+    }
+    .main .things{
+        padding: 0 8vw
+    }
+    .main h1{
+        @include h1;
+    }
+    .main h2{
+        @include h2;
+    }
+    .main .rules-content, .animals-content p{
+        @include p;
+    }
+    img:not(.cat, .parrot, .tg, .inst){
+        @include img;
+        position: relative;
+        top: 30px;
+    }
+    .thing{
+        padding: 50px 0;
+        @include flexrow;
+        gap: 10px;
+    }
+    .thing:nth-child(2) h2{
+        text-align: right;
+    }
+    
+    .main .animals-content{
+        @extend %paddLaptop;
+    }
+    .animals{
+        padding: 0 8vw;
+    }
+    .animals .animal{
+        padding: 50px 0;
+        @include flexrow;
+        gap: 10px;
+    }
+    .cat{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        top: 10px;
+    }
+    .parrot{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 10px;
+    }
+    
+    .main .button-content{
+        @extend %paddLaptop;
+        @include flexrow;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .button-content button{
+        margin-right: 60px;
+        border: 0;
+        background-color: $blue;
+        width: 200px;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+    .button-content button p{
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .footer{
+        background-color: black;
+    }
+    .footer-content{
+        height: 100%;
+        @extend %paddLaptop;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+    .support{
+        width: 250px;
+        position: relative;
+        bottom: 18.75px;
+    }
+    .adress{
+        width: 250px;
+    }
+    .icons{
+        padding-left: 7px;
+    }
+    .icons img:nth-child(1){
+        width: 80px;
+    }
+    .icons img:nth-child(2){
+        width: 114px;
+        position: relative;
+        top: 3.5px;
+        left: 10px;
+    }
+    .footer-content h3{
+        font-size: 18px;
+    }
+    .footer-content p{
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1000px){
+    %paddTablet{
+        padding: 0 6vw;
+    }
+    @mixin h1-Tablet{
+        font-size: 40px;
+        color: white;
+    }
+    @mixin h2-Tablet{
+        font-size: 35px;
+        color: white;
+        font-weight: 500;
+    }
+    @mixin p-Tablet{
+        font-weight: 300;
+        font-size: 16px;
+        color: white;
+    }
+    @mixin img-Tablet{
+        width: 150px;
+        height: 150px;
+    }
+    .adaptive{
+        display: grid;
+        grid-template-rows: 50px 2fr 220px;
+        row-gap: 0;
+    }
+    .header{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: black;
+    }
+    .header-content{
+        @include flexrow;
+        align-items: center;
+        justify-content: space-between;
+        @extend %paddTablet;
+        height: 100%;
+    
+    }
+    .header-content .menu .menu-list{
+        display: flex;
+        gap: 30px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .header .burger{
+        display: none;
+    }
+    .logo-text a, .menu a{
+        @include a;
+    }
+    .header-content .logo{
+        background: url(/plane.svg) no-repeat;
+        padding-left: 65px;  
+        background-size: contain;
+    }
+    .header-content .logo .logo-text{
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+    .main{
+        background: $rgb-bg;
+        display: grid;
+        grid-template-rows: 200px 2fr 1fr 150px;
+        row-gap: 0;
+    }   
+    
+    .main .panel-content{
+        @extend %paddTablet;
+        @include flexrow;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .panel-content .block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 130px;
+        height: 80px;
+        border-radius: 10px;
+    }
+    .panel-content .block:not(:nth-child(4)){
+        background-color: rgba(214, 214, 214, 1);
+    }
+    .panel-content .block p:nth-child(1){
+        font-size: 19px;
+        font-weight: 700;
+    }
+    .panel-content .block:not(:nth-child(4)) p:nth-child(2){
+        font-size: 17px;
+        font-weight: 300;
+    }
+    .panel-content .block:not(:nth-child(4)) p a{
+        text-decoration: none;
+        color: rgba(42, 45, 54, 1);
+    }
+    .panel-content .block:not(:nth-child(4)) p:nth-child(1){
+        color: black;
+    }
+    .panel-content .block:nth-child(4){
+        background-color: $green;
+    }
+    .panel-content .block:nth-child(4) p {
+        color: white;
+    }
+    .panel-content .block:nth-child(4) p:nth-child(2){
+        font-size: 17px;
+        font-weight: 700;
+    }
+    .main .rules-content{
+        @extend %paddTablet;
+        margin-bottom: 60px;
+    }
+    .rules-content .p-rule{
+        padding: 0 20px;
+    }
+    .main .things{
+        padding: 0 8vw
+    }
+    .main h1{
+        @include h1-Tablet;
+    }
+    .main h2{
+        @include h2-Tablet;
+    }
+    .main .rules-content, .animals-content p{
+        @include p-Tablet();
+    }
+    img:not(.cat, .parrot, .tg, .inst){
+        @include img-Tablet();
+        position: relative;
+        top: 30px;
+    }
+    .thing{
+        padding: 50px 0;
+        @include flexrow;
+        gap: 10px;
+    }
+    .thing:nth-child(2) h2{
+        text-align: right;
+    }
+    
+    .main .animals-content{
+        @extend %paddTablet;
+    }
+    .animals{
+        padding: 0 8vw;
+    }
+    .animals .animal{
+        padding: 50px 0;
+        @include flexrow;
+        gap: 10px;
+    }
+    .cat{
+        width: 140px;
+        height: 140px;
+        position: relative;
+        top: 10px;
+    }
+    .parrot{
+        width: 90px;
+        height: 90px;
+        position: relative;
+        top: 10px;
+    }
+    
+    .main .button-content{
+        @extend %paddTablet;
+        @include flexrow;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .button-content button{
+        margin-right: 60px;
+        border: 0;
+        background-color: $blue;
+        width: 200px;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+    .button-content button p{
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .footer{
+        background-color: black;
+    }
+    .footer-content{
+        height: 100%;
+        @extend %paddTablet;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+    .support{
+        width: 230px;
+        position: relative;
+        bottom: 18.75px;
+    }
+    .adress{
+        width: 230px;
+    }
+    .icons{
+        padding-left: 0;
+    }
+    .icons img:nth-child(1){
+        width: 70px;
+    }
+    .icons img:nth-child(2){
+        width: 104px;
+        position: relative;
+        top: 3.5px;
+        left: 10px;
+    }
+    .footer-content h3{
+        font-size: 17px;
+    }
+    .footer-content p{
+        font-size: 13px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+    %paddMobile{
+        padding: 0 5vw;
+    }
+    @mixin h1-Mobile{
+        font-size: 35px;
+        color: white;
+    }
+    @mixin h2-Mobile{
+        font-size: 30px;
+        color: white;
+        font-weight: 500;
+    }
+    @mixin p-Mobile{
+        font-weight: 300;
+        font-size: 15px;
+        color: white;
+    }
+    @mixin img-Mobile{
+        width: 21vw;
+        height: 21vw;
+       
+    }
+    @mixin flexcolumn{
+        display: flex;
+        flex-direction: column;
+    }
+    .adaptive{
+        display: grid;
+        grid-template-rows: 50px 2fr 400px;
+        row-gap: 0;
+    }
+    .header{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: black;
+    }
+    .header-content{
+        @include flexrow;
+        align-items: center;
+        justify-content: space-between;
+        @extend %paddMobile;
+        height: 100%;
+    
+    }
+    .header-content .menu{
+        display: none;
+    }
+    .header-content .menu .menu-list{
+        position: absolute;
+        top: 50px;
+        right: 5vw;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .header-content .menu .menu-list a{
+        background-color: black;
+        padding: 15px 20px;
+        font-weight: 300;
+        font-size: 16px;
+        border-top: 2px solid white;
+    }
+    .header-content .menu .menu-list a:active{
+        background-color: rgba(33, 222, 33, 1);
+    }
+    .header-content .burger{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 35px;
+        transition: all 0.2s ease-in-out;
+    }
+    .burger div{
+        background-color: white;
+        width: 100%;
+        height: 6px;
+        border-radius: 6px;
+    }
+    .burger.active{
+        transform: rotate(90deg);
+    }
+    .burger.active div{
+        background-color: rgba(33, 222, 33, 1);
+    }
+    .logo-text a, .menu a{
+        @include a;
+    }
+    .header-content .logo{
+        background: url(/plane.svg) no-repeat;
+        padding-left: 50px;  
+        background-size: contain;
+    }
+    .header-content .logo .logo-text{
+        font-weight: 600;
+        font-size: 18px;
+    }
+    
+    .main{
+        background: $rgb-bg;
+        display: grid;
+        grid-template-rows: 200px 2fr 1fr 150px;
+        row-gap: 0;
+    }   
+    
+    .main .panel-content{
+        @extend %paddMobile;
+        @include flexrow;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .panel-content .block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 15vw;
+        height: 70px;
+        border-radius: 10px;
+    }
+    .panel-content .block:not(:nth-child(4)){
+        background-color: rgba(214, 214, 214, 1);
+    }
+    .panel-content .block p:nth-child(1){
+        font-size: 19px;
+        font-weight: 700;
+    }
+    .panel-content .block:not(:nth-child(4)) p:nth-child(2){
+        display: none;
+    }
+    .panel-content .block:not(:nth-child(4)) p a{
+        text-decoration: none;
+        color: rgba(42, 45, 54, 1);
+    }
+    .panel-content .block:not(:nth-child(4)) p:nth-child(1){
+        color: black;
+    }
+    .panel-content .block:nth-child(4){
+        background-color: $green;
+    }
+    .panel-content .block:nth-child(4) p {
+        color: white;
+    }
+    .panel-content .block:nth-child(4) p:nth-child(2){
+        display: none;
+    }
+    .main .rules-content{
+        @extend %paddMobile;
+        margin-bottom: 60px;
+    }
+    .rules-content .p-rule{
+        padding: 0 20px;
+    }
+    .main .things{
+        padding: 0 8vw;
+    }
+    .main h1{
+        @include h1-Mobile;
+    }
+    .main h2{
+        @include h2-Mobile;
+    }
+    .main .rules-content, .animals-content p{
+        @include p-Mobile;
+    }
+    img:not(.cat, .parrot, .tg, .inst){
+        @include img-Mobile;
+        position: relative;
+        top: 30px;
+    }
+    .rules-content .things{
+        padding: 0;
+    }
+    .thing{
+        padding: 50px 0;
+        @include flexrow;
+        gap: 10px;
+    }
+    .thing:nth-child(2) h2{
+        text-align: right;
+    }
+    
+    .main .animals-content{
+        @extend %paddMobile;
+    }
+    .animals{
+        padding: 0;
+    }
+    .animals .animal{
+        padding: 50px 0;
+        @include flexrow;
+        gap: 10px;
+    }
+    .cat{
+        width: 19vw;
+        height: 19vw;
+        position: relative;
+        top: 10px;
+    }
+    .parrot{
+        width: 17vw;
+        height: 17vw;
+        position: relative;
+        top: 10px;
+    }
+    
+    .main .button-content{
+        @extend %paddMobile;
+        @include flexrow;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .button-content button{
+        margin-right: 60px;
+        border: 0;
+        background-color: $blue;
+        width: 200px;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+    .button-content button p{
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .footer{
+        background-color: black;
+    }
+    .footer-content{
+        height: 100%;
+        @extend %paddMobile;
+        @include flexcolumn;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+    }
+    .support{
+        width: 210px;
+        position: relative;
+        bottom: 18.75px;
+    }
+    .adress{
+        width: 210px;
+    }
+    .icons{
+        padding-left: 0;
+    }
+    .icons img:nth-child(1){
+        width: 57px;
+    }
+    .icons img:nth-child(2){
+        width: 84px;
+        position: relative;
+        top: 3.5px;
+        left: 10px;
+    }
+    .footer-content h3{
+        font-size: 15px;
+    }
+    .footer-content p{
+        font-size: 13px;
+    }
+
+}
+@media (min-width: 320px) and (max-width: 480px){
+    @mixin h1-Mobile{
+        font-size: 30px;
+        color: white;
+        text-align: center;
+    }
+    @mixin h2-Mobile{
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        font-weight: 500;
+    }
+    @mixin p-Mobile{
+        font-weight: 300;
+        font-size: 14px;
+        color: white;
+    }
+    @mixin flexcolumn{
+        display: flex;
+        flex-direction: column;
+    }
+    .adaptive{
+        display: grid;
+        grid-template-rows: 50px 2fr 400px;
+        row-gap: 0;
+    }
+    .header{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: black;
+    }
+    .header-content{
+        @include flexrow;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5vw;
+        height: 100%;
+    
+    }
+    .header-content .menu{
+        display: none;
+    }
+    .header-content .menu .menu-list{
+        position: absolute;
+        top: 50px;
+        right: 5vw;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .header-content .menu .menu-list a{
+        background-color: black;
+        padding: 15px 20px;
+        font-weight: 300;
+        font-size: 16px;
+        border-top: 2px solid white;
+    }
+    .header-content .menu .menu-list a:active{
+        background-color: rgba(33, 222, 33, 1);
+    }
+    .header-content .burger{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 35px;
+        transition: all 0.2s ease-in-out;
+    }
+    .burger div{
+        background-color: white;
+        width: 100%;
+        height: 6px;
+        border-radius: 6px;
+    }
+    .burger.active{
+        transform: rotate(90deg);
+    }
+    .burger.active div{
+        background-color: rgba(33, 222, 33, 1);
+    }
+    .logo-text a, .menu a{
+        @include a;
+    }
+    .header-content .logo{
+        background: url(/plane.svg) no-repeat;
+        padding-left: 50px;  
+        background-size: contain;
+    }
+    .header-content .logo .logo-text{
+        font-weight: 600;
+        font-size: 18px;
+    }
+    
+    .main{
+        background: $rgb-bg;
+        display: grid;
+        grid-template-rows: 180px 2fr 0.8fr 150px;
+        row-gap: 0;
+    }   
+    
+    .main .panel-content{
+        padding: 0 5vw;
+        @include flexrow;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .panel-content .block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 15vw;
+        height: 70px;
+        border-radius: 10px;
+    }
+    .panel-content .block:not(:nth-child(4)){
+        background-color: rgba(214, 214, 214, 1);
+    }
+    .panel-content .block p:nth-child(1){
+        font-size: 19px;
+        font-weight: 700;
+    }
+    .panel-content .block:not(:nth-child(4)) p:nth-child(2){
+        display: none;
+    }
+    .panel-content .block:not(:nth-child(4)) p a{
+        text-decoration: none;
+        color: rgba(42, 45, 54, 1);
+    }
+    .panel-content .block:not(:nth-child(4)) p:nth-child(1){
+        color: black;
+    }
+    .panel-content .block:nth-child(4){
+        background-color: $green;
+    }
+    .panel-content .block:nth-child(4) p {
+        color: white;
+    }
+    .panel-content .block:nth-child(4) p:nth-child(2){
+        display: none;
+    }
+    .main .rules-content{
+        padding: 0 5vw;
+        margin-bottom: 10px;
+    }
+    .rules-content .p-rule{
+        padding: 0 20px;
+    }
+    .main .things{
+        padding: 0 8vw;
+    }
+    .main h1{
+        @include h1-Mobile;
+    }
+    .main h2{
+        @include h2-Mobile;
+    }
+    .main .rules-content, .animals-content p{
+        @include p-Mobile;
+    }
+    img:not(.tg, .inst){
+        display: none;
+    }
+    .rules-content .things{
+        padding: 0;
+    }
+    .thing{
+        padding: 10px 0;
+        @include flexrow;
+        gap: 10px;
+    }
+    .thing:nth-child(2) h2{
+        text-align: center;
+    }
+    
+    .main .animals-content{
+        padding: 0 5vw;
+    }
+    .animals{
+        padding: 0;
+    }
+    .animals .animal{
+        padding: 10px 0;
+        @include flexrow;
+        gap: 10px;
+    }
+    
+    .main .button-content{
+        padding: 0 5vw;
+        @include flexrow;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .button-content button{
+        margin-right: 30px;
+        border: 0;
+        background-color: $blue;
+        width: 200px;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+    .button-content button p{
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .footer{
+        background-color: black;
+    }
+    .footer-content{
+        height: 100%;
+        padding: 0 5vw;
+        @include flexcolumn;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+    }
+    .support{
+        width: 210px;
+        position: relative;
+        bottom: 18.75px;
+    }
+    .adress{
+        width: 210px;
+    }
+    .icons{
+        padding-left: 0;
+    }
+    .icons img:nth-child(1){
+        width: 57px;
+    }
+    .icons img:nth-child(2){
+        width: 84px;
+        position: relative;
+        top: 3.5px;
+        left: 10px;
+    }
+    .footer-content h3{
+        font-size: 15px;
+    }
+    .footer-content p{
+        font-size: 13px;
+    }
+
+}

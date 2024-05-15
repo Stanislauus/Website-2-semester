@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+    <ticket1>
+        <current_price>821 Br</current_price>
+        <departure_arrival>Минск-Стамбул</departure_arrival>
+        <date>16.04.2024</date>
+        <time>15:00-20:30</time>
+    </ticket1>
+    <ticket2>
+        <current_price>697 Br</current_price>
+        <departure_arrival>Минск-Дубай</departure_arrival>
+        <date>07.06.2024</date>
+        <time>22:00-07:30</time>
+    </ticket2>
+    <ticket3>
+        <current_price>1115 Br</current_price>
+        <departure_arrival>Минск-Пекин</departure_arrival>
+        <date>17.04.2024</date>
+        <time>18:05-09:50</time>
+    </ticket3>
+</tickets>

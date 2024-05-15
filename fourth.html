@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/css/fourth.css">
+</head>
+<body>
+    <div class="adaptive">
+
+
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 class="logo-text"><a href="first.html">Horizen Wings Airline</a></h1>
+                </div> 
+                <nav class="menu" id="menu">
+                    <div class="menu-list">
+                        <a href="first.html">главная</a>
+                        <a href="fifth.html">услуги</a>
+                        <a href="#vniz">контакты</a>
+                    </div>
+                </nav>
+                <nav class="burger" id="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="panel-content">
+                <div class="block">
+                    <p>1</p>
+                    <p><a href="first.html">Поиск</a></p>
+                </div>
+                <div class="block">
+                    <p>2</p>
+                    <p>Выбор</p>
+                </div>
+                <div class="block">
+                    <p>3</p>
+                    <p>Пассажиры</p>
+                </div>
+                <div class="block">
+                    <p>4</p>
+                    <p>Услуги</p>
+                </div>
+                <div class="block">
+                    <p>5</p>
+                    <p>Оплата</p>
+                </div>
+            </div>
+            <div class="text-content">
+                <div>
+                    <h1>Данные пассажира:</h1>
+                </div>
+                <div>
+                    <p>К перевозке, имеющей пункт назначения или остановку не в стране отправления, может быть применена Варшавская конвенция, которая в большинстве случаев ограничивает ответственность перевозчика за смерть или повреждение здоровья пассажира и за утрату или повреждение багажа.</p>
+                </div>
+            </div>
+            <div class="form">
+                <div class="form-font">
+                    <div class="form-content">
+                        <div>
+                            <input type="text" id="personSurname" placeholder="Фамилия">
+                        </div>
+                        <div>
+                            <input type="text" id="personNamepatronymic" placeholder="Имя Отчество">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Дата рождения" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">Пол</option>
+                                <option value="">Мужской</option>
+                                <option value="">Женский</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">Гражданство</option>
+                                <option value="">BY</option>
+                                <option value="">RU</option>
+                                <option value="">Другое</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">Документ</option>
+                                <option value="">НАЦИОНАЛЬНЫЙ ПАСПОРТ</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Номер документа">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Годен до" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="+### ## ### ## ##">
+                        </div>
+                        <div>
+                            <input type="email" id="personEmail" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <p>Я согласен(-на) обработку и хранение моих персональных данных</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-content">
+                <button id="submitButton"><p>Перейти к услугам</p></button>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="support">
+                    <h3>Поддержка:</h3>
+                    <p>horizenwingsairlines@gmail.com<br>+375 17 221 25 55</p>
+                    <a id="vniz"></a>
+                </div>
+                <div class="icons">
+                    <img src="/pictures/telegram-256x256.png" alt="">
+                    <img src="/pictures/insta.png" alt="">
+                </div>
+                <div class="adress">
+                    <h3>Адрес:</h3>
+                    <p>ОАО «Авиакомпания «Horizen Wings Airlines»<br>ул. Немига, 14А, г.Минск, Республика Беларусь, 220004</p>
+                </div>
+            </div>
+        </div> 
+
+
+    </div>
+    <script src="/js/burger.js"></script>
+    <script src="/js/ticketdatacopyform.js"></script>
+</body>
+</html>
