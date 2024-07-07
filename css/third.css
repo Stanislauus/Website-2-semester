@@ -274,6 +274,11 @@ div .table .price-block:active{
 .icons{
     padding-left: 7px;
 }
+.icons img:hover{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.9);
+}
 .icons img:nth-child(1){
     width: 80px;
 }
@@ -328,7 +333,6 @@ div .table .price-block:active{
         color: white;
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
         padding-left: 65px;
         background-size: contain;
     }
@@ -602,7 +606,6 @@ div .table .price-block:active{
         color: white;
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
         padding-left: 65px;
         background-size: contain;
     }
@@ -904,7 +907,6 @@ div .table .price-block:active{
         background-color: rgba(33, 222, 33, 1);
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
         padding-left: 50px;
         background-size: contain;
     }

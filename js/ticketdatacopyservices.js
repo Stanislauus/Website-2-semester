@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     document.querySelector('#submitButton').addEventListener('click', function() {
+
+        if (!personSurname || !personNamepatronymic || !personEmail) {
+            alert("Вернитесь на главную страницу!");
+            return;
+        }
+
         var url = "sixth.html?departure_date=" + departureDate +
         "&return_date=" + returnDate +
         "&departure_place=" + departurePlace +

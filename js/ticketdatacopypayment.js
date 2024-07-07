@@ -11,8 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     document.querySelector('#submitButton').addEventListener('click', function() {
-        
-        var alertMessage = `Здравствуйте, ${personSurname} ${personNamepatronymic}. Данные о билете и дальнейшая оплата отправлены на адрес электронной почты ${personEmail}`;
-        alert(alertMessage);
+        var cardNumber = document.querySelector('#cardNumber').value;
+        var cardPerson = document.querySelector('#cardPerson').value;
+        var cardMonth = document.querySelector('#cardMonth').value;
+        var cardYear = document.querySelector('#cardYear').value;
+        var cardCode = document.querySelector('#cardCode').value;
+
+        if (!cardNumber || !cardPerson || !cardMonth || !cardYear || !cardCode) {
+            alert("Заполните все данные!")
+
+        } else {
+            var alertMessage = `Здравствуйте, ${personSurname} ${personNamepatronymic}. Данные о билете и дальнейшая оплата отправлены на адрес электронной почты ${personEmail}`;
+            alert(alertMessage);
+        }
     });
 });

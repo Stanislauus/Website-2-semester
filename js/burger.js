@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             burger.classList.add('active');
         } else {
             menu.style.display = "none";
-            burger.classList.remove('active')
+            burger.classList.remove('active') 
         }
     });
 });

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 1; i < blockGroups.length; i++) {
         blockGroups[i].style.display = 'none';
     }
-
+  
     // Инициализируем переменную для отслеживания текущей группы
     var currentGroup = 0;
 

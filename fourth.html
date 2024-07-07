@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
+    <link rel="icon" type="image/x-icon" href="/pictures/plane.svg">
     <link rel="stylesheet" href="/css/fourth.css">
 </head>
 <body>
@@ -72,44 +73,44 @@
                             <input type="text" id="personNamepatronymic" placeholder="Имя Отчество">
                         </div>
                         <div>
-                            <input type="text" placeholder="Дата рождения" onfocus="(this.type='date')" onblur="(this.type='text')">
+                            <input type="text" id="personBirth" placeholder="Дата рождения" onfocus="(this.type='date')" onblur="(this.type='text')">
                         </div>
                         <div>
-                            <select name="" id="">
-                                <option value="">Пол</option>
-                                <option value="">Мужской</option>
-                                <option value="">Женский</option>
+                            <select name="" id="personSex">
+                                <option>Пол</option>
+                                <option>Мужской</option>
+                                <option>Женский</option>
                             </select>
                         </div>
                         <div>
-                            <select name="" id="">
-                                <option value="">Гражданство</option>
-                                <option value="">BY</option>
-                                <option value="">RU</option>
-                                <option value="">Другое</option>
+                            <select name="" id="personLife">
+                                <option>Гражданство</option>
+                                <option>BY</option>
+                                <option>RU</option>
+                                <option>Другое</option>
                             </select>
                         </div>
                         <div>
-                            <select name="" id="">
-                                <option value="">Документ</option>
-                                <option value="">НАЦИОНАЛЬНЫЙ ПАСПОРТ</option>
+                            <select name="" id="personDocument">
+                                <option>Документ</option>
+                                <option>НАЦИОНАЛЬНЫЙ ПАСПОРТ</option>
                             </select>
                         </div>
                         <div>
-                            <input type="text" placeholder="Номер документа">
+                            <input type="text" placeholder="Номер документа" id="personDocumentNumber">
                         </div>
                         <div>
-                            <input type="text" placeholder="Годен до" onfocus="(this.type='date')" onblur="(this.type='text')">
+                            <input type="text" id="personDocumentDate" placeholder="Годен до" onfocus="(this.type='date')" onblur="(this.type='text')">
                         </div>
                         <div>
-                            <input type="tel" placeholder="+### ## ### ## ##">
+                            <input type="tel" id="personTell" placeholder="+### ## ### ## ##">
                         </div>
                         <div>
                             <input type="email" id="personEmail" placeholder="E-mail">
                         </div>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" id="checkbox">
                         <p>Я согласен(-на) обработку и хранение моих персональных данных</p>
                     </div>
                 </div>

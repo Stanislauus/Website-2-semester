@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         xhttp.open("GET", filename, true);
         xhttp.send();
-    }
+    } 
 
     // Функция для получения данных из XML
     function getDataFromXML(callback) {
@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обработчик для кнопки "ДАЛЕЕ"
     document.querySelector('#submitButton').addEventListener('click', function() {
         getDataFromXML(function(data) {
+
+
             // Сбор выбранных значений
             var departureDate = document.querySelector('#departureDate').value;
             var returnDate = document.querySelector('#returnDate').value;
@@ -37,14 +39,18 @@ document.addEventListener('DOMContentLoaded', function() {
             var arrivalPlace = document.querySelector('#arrivalPlace').value;
             var passengerCount = document.querySelector('#passengerCount').value;
 
+            if (!departureDate || !returnDate || !departurePlace || !arrivalPlace || !passengerCount) {
+                alert("Заполните все данные!");
+                return;
+            }
+            
             // Формируем URL для перенаправления с данными о выбранных значениях
             var url = "second.html?departure_date=" + departureDate +
                       "&return_date=" + returnDate +
                       "&departure_place=" + departurePlace +
                       "&arrival_place=" + arrivalPlace +
                       "&passenger_count=" + passengerCount;
-
-            // Переход на следующую страницу
+            
             window.location.href = url;
         });
     });

@@ -177,11 +177,16 @@ html, body {
     padding-left: 50px;
 }
 input{
+    cursor: pointer;
     height: 45px;
     border: 0;
     border-radius: 10px;
     padding: 5px 10px;
     font-size: 14px;
+    
+}
+input:hover{
+    border-bottom: 2px solid rgba(33, 222, 33, 1);
 }
 .form div input:not(.date, .code){
     width: 280px;
@@ -205,6 +210,7 @@ div .code{
     padding-right: 50px;
 }
 .button-content button{
+    cursor: pointer;
     width: 170px;
     height: 55px;
     background-color: rgba(33, 222, 33, 1);
@@ -213,8 +219,15 @@ div .code{
     border: 0;
     font-weight: 700;
     border-radius: 10px;
+    transition: all 0.2s ease-in-out;
 }
-
+.button-content button:hover{
+    background-color: white;
+    color: rgba(33, 222, 33, 1);
+}
+.button-content button:active{
+    background-color: rgba(231, 233, 240, 1);
+}
 
 
 
@@ -240,6 +253,11 @@ div .code{
 }
 .icons{
     padding-left: 7px;
+}
+.icons img:hover{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.9);
 }
 .icons img:nth-child(1){
     width: 80px;
@@ -295,7 +313,7 @@ div .code{
         color: white;
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
+        background: url(/pictures/plane.svg) no-repeat;
         padding-left: 65px;
         background-size: contain;
     }
@@ -534,7 +552,7 @@ div .code{
         color: white;
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
+        background: url(/pictures/plane.svg) no-repeat;
         padding-left: 65px;
         background-size: contain;
     }
@@ -806,7 +824,7 @@ div .code{
         color: white;
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
+        background: url(/pictures/plane.svg) no-repeat;
         padding-left: 50px;
         background-size: contain;
     }

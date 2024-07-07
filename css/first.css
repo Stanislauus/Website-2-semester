@@ -368,6 +368,11 @@ option{
 .icons{
     padding-left: 7px;
 }
+.icons img:hover{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.9);
+}
 .icons img:nth-child(1){
     width: 80px;
 }
@@ -421,7 +426,6 @@ option{
         color: white;
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
         padding-left: 65px;
         background-size: contain;
     }
@@ -432,7 +436,6 @@ option{
     
     
     .main-photo{
-        background: url(phoneplane.jpg) no-repeat;
         background-position: left 50% bottom 50%;
         background-size: cover;  
         background-attachment: fixed;
@@ -793,7 +796,6 @@ option{
         color: white;
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
         padding-left: 65px;
         background-size: contain;
     }
@@ -804,7 +806,6 @@ option{
     
     
     .main-photo{
-        background: url(phoneplane.jpg) no-repeat;
         background-position: center;
         background-size: cover;  
         background-attachment: fixed;
@@ -1216,7 +1217,6 @@ option{
         color: white;
     }
     .header-content .logo{
-        background: url(plane.svg) no-repeat;
         padding-left: 65px;
         background-size: contain;
     }
@@ -1227,7 +1227,6 @@ option{
     
     
     .main-photo{
-        background: url(phoneplane.jpg) no-repeat;
         background-position: center;
         background-size: cover;  
         background-attachment: fixed;

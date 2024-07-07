@@ -7,6 +7,9 @@
         <departure_place>Нижний Новгород</departure_place>
         <departure_place>Калининград</departure_place>
         <departure_place>Стамбул</departure_place>
+        <departure_place>Каир</departure_place>
+        <departure_place>Париж</departure_place>
+        <departure_place>Венеция</departure_place>
     </departure>
     <arrival>
         <arrival_place>Минск</arrival_place>
@@ -15,6 +18,9 @@
         <arrival_place>Нижний Новгород</arrival_place>
         <arrival_place>Калининград</arrival_place>
         <arrival_place>Стамбул</arrival_place>
+        <arrival_place>Каир</arrival_place>
+        <arrival_place>Париж</arrival_place>
+        <arrival_place>Венеция</arrival_place>
     </arrival>
     <departure_date></departure_date>
     <return_date></return_date>

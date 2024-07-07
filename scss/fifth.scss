@@ -63,7 +63,7 @@ html, body {
     justify-content: space-between;
     @extend %padd;
     height: 100%;
-
+ 
 }
 .header-content .menu .menu-list{
     display: flex;
@@ -255,6 +255,11 @@ img:not(.cat, .parrot, .tg, .inst){
 .icons{
     padding-left: 7px;
 }
+.icons img:hover{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.9);
+}
 .icons img:nth-child(1){
     width: 80px;
 }
@@ -312,7 +317,7 @@ img:not(.cat, .parrot, .tg, .inst){
         @include a;
     }
     .header-content .logo{
-        background: url(/plane.svg) no-repeat;
+        background: url(/pictures/plane.svg) no-repeat;
         padding-left: 65px;  
         background-size: contain;
     }
@@ -545,7 +550,7 @@ img:not(.cat, .parrot, .tg, .inst){
         @include a;
     }
     .header-content .logo{
-        background: url(/plane.svg) no-repeat;
+        background: url(/pictures/plane.svg) no-repeat;
         padding-left: 65px;  
         background-size: contain;
     }
@@ -817,7 +822,7 @@ img:not(.cat, .parrot, .tg, .inst){
         @include a;
     }
     .header-content .logo{
-        background: url(/plane.svg) no-repeat;
+        background: url(/pictures/plane.svg) no-repeat;
         padding-left: 50px;  
         background-size: contain;
     }
@@ -1082,7 +1087,7 @@ img:not(.cat, .parrot, .tg, .inst){
         @include a;
     }
     .header-content .logo{
-        background: url(/plane.svg) no-repeat;
+        background: url(/pictures/plane.svg) no-repeat;
         padding-left: 50px;  
         background-size: contain;
     }
